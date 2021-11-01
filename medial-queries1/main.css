@@ -1,3 +1,49 @@
+* {
+  border: 1px solid black;
+}
+
 body {
   background: blanchedalmond;
+  margin: 0;
+  text-align: center;
+  padding: 5px;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  min-height: 100vh;
+  gap: 5px;
+}
+
+.a {
+  height: 35vh;
+  width: 100%;
+}
+
+.b {
+  height: 65vh;
+  flex-grow: 3;
+}
+
+.c {
+  height: 65vh;
+  flex-grow: 1;
+}
+
+@media (max-width: 600px) {
+  .container {
+      flex-direction: column;
+      flex-wrap: wrap;
+  }
+  .a {
+      height: 15vh;
+  }
+  .b {
+    height: 70vh;
+  }
+  .c {
+    height: 15vh;
+  }
 }
